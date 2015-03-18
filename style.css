@@ -1,0 +1,428 @@
+/*
+**/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}ul{padding:0;}
+@font-face{
+    font-family: serifa BT;
+    
+    src: url('font/serifab.ttf');
+    src: url('font/serifat.ttf');
+    src: url('font/serifai.ttf');
+    src: url('font/serifan.ttf');
+}
+body {
+	background-image: url('images/bg-body.png');
+	color: #000305;
+	font-size:87.5%; /* This is equivalent to 14px or 12pt*/
+	line-height: 1.5;
+	text-align: left;
+    font-family: serifa BT;
+}
+
+/* Styling the links*/
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #7cb453;
+}
+
+a:hover, a:active {
+	background-color: #7cb453;
+	color: #FFF;
+	padding: 1% 2%;
+}
+
+
+.body {
+    max-width: 1000px;
+	margin: 0 auto;
+	width: 80%;
+	clear: both; /* This does't allow any flading around the body*/
+}
+/*------------------------------------------ Header ---------------------------------------------*/
+.mainHeader img {
+	width:30%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.mainHeader nav {
+	background: #313131;
+	height: 40px;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+    padding-left: 4%;
+}
+
+.mainHeader nav ul {
+	list-style: none;
+	margin: 0 auto; /* The margin is 0 because we have a margin 2% from .mainHeader img style */
+}
+
+.mainHeader nav ul li {
+	float: left;
+	display: inline;
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 10px 25px;
+    height: 20px; /* The navigation height is: 
+                  40px minus padding 10px on top and 10px on bottom = 20px is the links height*/
+}
+.mainHeader nav a:hover, .mainHeader nav a:active, 
+.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+	background-color: #7cb453;
+	text-shadow: none;
+}
+.mainHeader nav ul li a {
+	border-radius: none;
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+}
+.mainHeader input{
+    float: right;
+    width: 21%;  
+	height: 22px;
+    border: none;
+    border-radius: 22px;
+    margin: 8px 0;  
+    padding-left: 10px;
+    margin-right: 4%;
+}
+.mainHeader input::-moz-placeholder{
+    font-style: italic;
+    color:#bfbdbd;
+}
+.mainHeader input::-webkit-input-placeholder{
+    font-style: italic;
+    color:#bfbdbd;
+}
+.mainHeader input:-ms-input-placeholder{
+    font-style: italic;
+    color:#bfbdbd;
+}
+/*---------------------------------------- Slider -----------------------------------------*/
+#slider{
+    overflow: auto;
+	width: 100%;    /*clear floats*/
+}
+#slider img{
+    display: block;
+}
+#sl-image{
+    float: left;
+    width: 60%;
+    display: block;
+
+    
+}
+.sl-button{
+    opacity: 0.20;
+    background: #000;
+    float: left;
+    width: 20%;
+    max-width: 200px;
+    display: block;
+}
+#sl-image img, .sl-button img{
+    width: 100%;
+}
+.leftSlbutton{
+    float: right;
+}
+.sl-button:hover{
+    opacity: 0.30;
+}
+/*---------------------------------------- Main Content -----------------------------------------*/
+
+.mainContent {
+	line-height: 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+   
+	/* overflow: hidden; ????????? need to look this up ????????*/
+}
+
+.content {
+    background-color: #FFF;
+    margin: 1.2% 0;
+	width: 71.6%;
+	float: left;
+    border:  1px solid #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    box-shadow: 0 0 7px #d5d5d5 ;
+    color: #5a5b5d;
+}
+
+.topContent {
+    padding: 3% 5%;
+}
+.contentAbout {
+	width: 100%;
+	float: left;
+}
+
+.topContentAbout {
+	background-color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    padding: 2% 5%;
+    margin-top: 2.8%;
+}
+.topContentAbout img {
+	width: 32%;
+	margin-top: 2.8%;
+}
+
+.bottomContent {
+	background-color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    padding: 3% 5%;
+    margin-top: 2.8%;
+}
+/*----------------------------------- post-info ("footer") ---------------------------------------*/
+.post-info {
+    font-style: italic;
+    color: #999;
+    font-size: 90%;
+}
+/*------------------------------------------ Sidebars ---------------------------------------------*/
+
+.top-sidebar,.middle-sidebar,.bottom-sidebar{
+    width: 21%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    padding: 2% 3%;
+    box-shadow: 0 0 7px #d5d5d5 ;
+    color: #5a5b5d;
+}
+.top-sidebar {
+	margin: 1.2% 0 1.2% 1.2%; /* <-- clock wize */
+}
+.middle-sidebar, .bottom-sidebar {
+	margin-left: 1.2%;
+	margin-bottom: 1.2%;
+}
+
+
+/*---------------------------------------- Footer -----------------------------------------*/
+
+.mainFooter {
+    overflow: hidden;
+	font-size: small;
+    display: block;
+	width: 100%;
+	border-radius:  0 0 5px 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	 background-image: url(images/footerBack.jpg);
+     background-repeat: no-repeat;
+     padding: 3% 3.5%;
+     box-sizing: border-box;
+    
+}
+
+.mainFooter p {
+	width: 56%;
+	color: #464847;
+    
+}
+.mainFooter img{
+    max-width: 45px;
+    max-height: 45px;
+    padding: 30px 0;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+.Contact{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.clear{
+    height: 1px;
+    width: 100%;
+}
+.stateUni{
+    margin: 40px 0 30px 20px;
+}
+
+/*Tablet Screen*/
+@media only screen and (min-width: 601px) and (max-width: 700px)
+{
+.body{
+    width: 90%;
+   } 
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+	padding: 10px 22%;
+}
+#slider{
+    float: none;
+   
+}
+.content{
+     display: block;
+    margin: 1.2% 0;
+	width: 100%;
+	float: none;
+    margin-bottom: 50px;
+}
+.top-sidebar,.middle-sidebar,.bottom-sidebar{
+    width: 90%;
+	float: none;
+    padding: 3% 5%;
+    margin-left: 0;
+	
+}
+
+}
+
+
+/*Phone Screen*/
+@media only screen and (min-width: 150px) and (max-width: 600px)
+
+
+{
+	.body {
+	    width: 90%;
+	    font-size: 95%;
+        }
+
+    .mainHeader img {
+	    width:100%;
+        }
+
+
+
+.mainHeader nav {
+	height: 160px;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+    padding:0;
+}
+
+.mainHeader nav ul {
+	padding-left: 0; 
+}
+
+.mainHeader nav ul li {
+ 	width: 100%;
+ 	text-align: center;
+ 	display: block;
+
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+	padding: 10px 0px; /* my Problem */
+	width: 100%;
+    height: 20px; 
+}
+.mainHeader input{
+    margin: 15px auto 0 auto;
+    width: 100%; 
+    border-radius: 0;
+   box-sizing: border-box;
+   height: 40px;
+}
+
+
+.content {
+	width: 100%;
+	float: left;
+	margin-top: 2%;
+    margin-bottom: 50px;
+    overflow: auto;
+    
+}
+
+.post-info{
+	display: none;
+}
+
+.topContent {
+	background-color: #FFF;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+    padding: 3% 5%;
+    margin: 1.8% 0 4% 0;
+}
+.topContentAbout {
+	background-color: #FFF;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+    padding: 3% 5%;
+    margin: 1.8% 0 4% 0;
+}
+
+.topContentAbout img {
+	width: 100%;
+	margin-top: 2.8%;
+} 
+
+.bottomContent {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	padding: 3% 5%;
+    margin: 1.8% 0 1.8% 0;
+}
+
+
+
+
+.top-sidebar,.middle-sidebar,.bottom-sidebar{
+    width: 90%;
+	float: none;
+    padding: 3% 5%;
+    margin-left: 0;
+	
+}
+
+.mainFooter {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
